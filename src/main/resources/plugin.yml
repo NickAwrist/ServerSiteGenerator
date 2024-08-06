@@ -1,0 +1,9 @@
+name: Server_Website
+version: '1.0-SNAPSHOT'
+main: nickawrist.server_Website.Server_Website
+api-version: '1.21'
+commands:
+  serverweb:
+    description: Open the server website
+    usage: /serverweb reload
+    aliases: [sw]
