@@ -16,7 +16,9 @@ public final class Server_Website extends JavaPlugin {
         // Plugin startup logic
         this.getCommand("serverweb").setExecutor(new ServerWebReload(this));
 
+        this.saveDefaultConfig();
         getLogger().info("Enabling Server_Website...");
+
         createWebFiles();
         if(startWebServer()){
             getLogger().info("Server_Website enabled!");

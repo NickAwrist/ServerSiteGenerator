@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.bukkit.Bukkit.getLogger;
+import static org.bukkit.Bukkit.getPluginManager;
 
 
 public class WebServer {
@@ -44,7 +45,10 @@ public class WebServer {
 
     public boolean start() {
         try {
-            server = HttpServer.create(new InetSocketAddress(8080), 0);
+
+            int PORT = Server_Website.getPlugin(Server_Website.class).getConfig().getInt("port");
+
+            server = HttpServer.create(new InetSocketAddress(PORT), 0);
             server.createContext("/", new FileHandler(webRoot, htmlFiles));
             server.setExecutor(null);
             server.start();
