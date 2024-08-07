@@ -1,5 +1,5 @@
 name: Server_Website
-version: '1.0-SNAPSHOT'
+version: '1.0'
 main: nickawrist.server_Website.Server_Website
 api-version: '1.21'
 commands:
