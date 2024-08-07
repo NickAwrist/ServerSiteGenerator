@@ -80,8 +80,6 @@ public final class Server_Website extends JavaPlugin {
         }
     }
 
-
-
     public boolean startWebServer() {
         webServer = new WebServer(getDataFolder().toPath().resolve("web").toString());
         return webServer.start();

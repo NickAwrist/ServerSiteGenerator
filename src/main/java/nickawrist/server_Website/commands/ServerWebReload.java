@@ -16,17 +16,16 @@ public class ServerWebReload implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
+        if (sender instanceof Player player) {
             if (player.hasPermission("serverweb.reload")) {
                 plugin.reloadWebServer();
                 player.sendMessage("Web server reloaded successfully.");
-                return true;
             } else {
                 player.sendMessage("You do not have permission to use this command.");
-                return true;
             }
+            return true;
         }
+        plugin.reloadConfig();
         plugin.reloadWebServer();
         sender.sendMessage("Web server reloaded successfully.");
         return true;
