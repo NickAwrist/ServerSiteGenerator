@@ -1,4 +1,4 @@
-name: Server_Website
+name: ServerSiteGenerator
 version: '1.0'
 main: nickawrist.server_Website.Server_Website
 api-version: '1.21'
