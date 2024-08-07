@@ -13,21 +13,13 @@ header {
     color: white;
 }
 
-header img.creeper-face {
+header .logo {
     position: absolute;
     top: 10px;
     left: 10px;
     width: 50px;
     height: 50px;
 }
-header img.creeper-face2 {
-    position: absolute;
-    top: 10px;
-    left: 50px;
-    width: 50px;
-    height: 50px;
-}
-
 
 nav {
     background-color: #333;
@@ -61,7 +53,7 @@ footer {
     bottom: 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: sans-serif;
 }
 
@@ -71,4 +63,41 @@ section {
 
 strong {
     color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.faq h3 {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: left;
+}
+
+.faq-content {
+    display: none;
+    padding: 10px;
+    background-color: #f3f3f3;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery img {
+    max-width: 30%;
+    height: auto;
 }

@@ -89,7 +89,6 @@ public class WebServer {
             }
 
             Path filePath = Paths.get(webRoot + uri);
-            getLogger().info("Request: " + filePath);
             if(Files.exists(filePath)) {
                 String mimeType = getMimeType(filePath);
 

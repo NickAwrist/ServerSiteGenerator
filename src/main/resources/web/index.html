@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - My Minecraft Server</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="imgs/minecraft_grass.ico" type="image/x-icon">
-
+    <link rel="icon" href="imgs/favicon.jpg" type="image/x-icon">
 </head>
 <body>
 <header>
-    <img src="imgs/creeper_face.png" alt="Creeper Face" class="creeper-face">
-    <img src="imgs/creeper_gif.gif" alt="Creeper Face" class="creeper-face2">
+    <img src="imgs/logo.png" alt="Server Logo" class="logo">
     <h1>Welcome to My Minecraft Server</h1>
 </header>
 <nav>
@@ -26,6 +24,32 @@
     <section>
         <h2>Get Started</h2>
         <p>To join our server, simply connect to <strong>your.server.ip</strong> in Minecraft.</p>
+    </section>
+    <section>
+        <h2>Join Our Community</h2>
+        <p>Connect with other players and get the latest updates by joining our Discord server!</p>
+        <button id="discordButton">Join our Discord</button>
+    </section>
+    <section>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3 onclick="toggleFAQ(this)">How do I join the server?</h3>
+            <div class="faq-content">
+                <p>Simply connect to <strong>your.server.ip</strong> in Minecraft.</p>
+            </div>
+            <h3 onclick="toggleFAQ(this)">What version of Minecraft is the server running?</h3>
+            <div class="faq-content">
+                <p>Our server is running Minecraft version 1.21.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="imgs/image1.jpg" alt="Screenshot 1">
+            <img src="imgs/image2.jpg" alt="Screenshot 2">
+            <img src="imgs/image3.jpg" alt="Screenshot 3">
+        </div>
     </section>
 </main>
 <footer>

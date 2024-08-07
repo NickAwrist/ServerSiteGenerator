@@ -48,13 +48,11 @@ public final class Server_Website extends JavaPlugin {
                 Path fontsDir = webDir.resolve("fonts");
                 Files.createDirectories(fontsDir);
 
+                // Copy images directory
                 Path imagesDir = webDir.resolve("imgs");
                 Files.createDirectories(imagesDir);
-                copyResource("web/imgs/creeper_face.png", imagesDir.resolve("creeper_face.png"));
-                copyResource("web/imgs/creeper_jpg.jpg", imagesDir.resolve("creeper_jpg.jpg"));
-                copyResource("web/imgs/creeper_gif.gif", imagesDir.resolve("creeper_gif.gif"));
-                copyResource("web/imgs/minecraft_grass.ico", imagesDir.resolve("minecraft_grass.ico"));
-
+                copyResource("web/imgs/favicon.jpg", imagesDir.resolve("favicon.jpg"));
+                copyResource("web/imgs/logo.png", imagesDir.resolve("logo.png"));
 
             } catch (Exception e) {
                 getLogger().severe("Failed to create web directory: " + e.getMessage());
@@ -74,8 +72,6 @@ public final class Server_Website extends JavaPlugin {
                 while ((bytesRead = bin.read(buffer)) != -1) {
                     bout.write(buffer, 0, bytesRead);
                 }
-
-                getLogger().info("Successfully copied resource: " + resource + " to " + target);
             }
         } catch (IOException e) {
             getLogger().severe("Failed to copy resource " + resource + ": " + e.getMessage());
